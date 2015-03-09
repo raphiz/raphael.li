@@ -56,6 +56,6 @@ You can detect this if the `External Access -> DDNS` displays neither a service 
 
 {% image resources/synology/dyn/005.png %}
 
-Let's hope Synology fix this soon.
+Let's hope this gets fixed soon!
 
 Happy hacking!
