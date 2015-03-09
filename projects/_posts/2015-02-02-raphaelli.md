@@ -8,7 +8,7 @@ teaser: My personal website and portfolio page
 initiation: 2015
 ---
 
-Raphael.li is my personal website and protfolio page. It's built with [jekyll](http://jekyllrb.com/).
+Raphael.li is my personal website and protfolio page. It's built with [Jekyll](http://jekyllrb.com/).
 
 The code is open source - feel free to copy my work!
 
