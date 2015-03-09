@@ -10,7 +10,7 @@ then perform a simple Unison sync.
 
 For a working example, checkout the script below.
 
-## How it all begun
+## Why?
 I had to do some work on a shared ftp server lately.
 Since I also work in trains where the internet connection
 can be terribly slow, I like to be able to do work offline.
