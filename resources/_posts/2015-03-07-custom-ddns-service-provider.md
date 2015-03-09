@@ -39,7 +39,7 @@ If you want to script this procedure, override the `/etc/ddns.conf` and `/etc.de
 #remember to consider updating problem.
 [nsupdate]
 hostname=mydomain.nsupdate.info
-passwd=Top secrit!
+passwd=Top Secret!
 net=DEFAULT
 status=
 ip=00.00.00.00
