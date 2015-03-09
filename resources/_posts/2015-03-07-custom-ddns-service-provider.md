@@ -34,7 +34,7 @@ After configuring the DDNS provider settings, the `Status` section should displa
 
 If you want to script this procedure, override the `/etc/ddns.conf` and `/etc.defaults/ddns.conf` which contains the configuration of your DDNS provider.
 
-```
+```ini
 #If you want to change DDNS Name, remember to change upnpd.c,
 #remember to consider updating problem.
 [nsupdate]
