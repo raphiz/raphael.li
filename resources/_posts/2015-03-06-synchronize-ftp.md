@@ -48,7 +48,7 @@ MOUNTPOINT=/mnt/my_ftp_share/
 LOCAL="/home/user/directory"
 ftp_HOST="example.com"
 ftp_USER="user"
-ftp_PASS="secrit"
+ftp_PASS="secret"
 ftp_SUBFOLDER="httpdocs/"
 
 
