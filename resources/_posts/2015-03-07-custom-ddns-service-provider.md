@@ -21,16 +21,16 @@ Please be advised that this works with IPv4 only! (Btw. I just copied the DynDNS
 
 `nsupdate` will now appear in the list of available DDNS providers. Click `add` in `External Access -> DDNS` and configure the new service provider.
 
-{% image work/synology/dyn/002.png %}
+{% image resources/synology/dyn/002.png %}
 
 __Note that the required password is not your nsupdate password!__ You can get the password/token from the nsupdate website. It's called a `Generated Host Secret` and is presented to you after adding a new host. It is regenerated when clicking on the `Show Configuration` button on the host dashboard.
 
-{% image work/synology/dyn/004.png %}
+{% image resources/synology/dyn/004.png %}
 
 After configuring the DDNS provider settings, the `Status` section should display `Normal` (or similar). You can also verify if everything worked by visiting nsupdate's dashboard
 
-{% image work/synology/dyn/001.png %}
-{% image work/synology/dyn/003.png %}
+{% image resources/synology/dyn/001.png %}
+{% image resources/synology/dyn/003.png %}
 
 If you want to script this procedure, override the `/etc/ddns.conf` and `/etc.defaults/ddns.conf` which contains the configuration of your DDNS provider.
 
@@ -54,7 +54,7 @@ ipv6=0:0:0:0:0:0:0:0
 DSM Updates might break this! It's unclear to me why updates override both `ddns_provider.conf` files.
 You can detect this if the `External Access -> DDNS` displays neither a service provider nor a status.
 
-{% image work/synology/dyn/005.png %}
+{% image resources/synology/dyn/005.png %}
 
 Let's hope Synology fix this soon.
 
