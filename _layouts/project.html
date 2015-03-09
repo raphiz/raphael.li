@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="wrapper">
+        <h1>{{ page.title }}</h1>
+        <div style="font-size: 40px;text-align:center">
+            {% if page.github %}
+            <a href="{{ page.github }}" class="fa fa-5 fa-github" target="_blank" alt="Github" title="Go to the Github repo"></a>
+            {% endif %}
+            {% if page.website %}
+            <a href="{{ page.website }}" class="fa fa-5 fa-sitemap" target="_blank" alt="Github" title="Go to the project website"></a>
+            {% endif %}
+        </div>
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

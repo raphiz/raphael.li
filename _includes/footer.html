@@ -1,0 +1,9 @@
+
+
+{% javascript highlight-8.2.min %}
+{% javascript jquery-2.1.3 %}
+{% javascript main %}
+
+{% for script in page.scripts %}
+{{ script | javascript }}
+{% endfor %}

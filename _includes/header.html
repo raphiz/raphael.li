@@ -1,0 +1,23 @@
+<header>
+    <div class="container">
+        <a id="top" class="nav-btn fa fa-bars" href="#nav"></a>
+        <div class="logo"><a href="/">raphael<span class="extension">.li</a></div>
+        <div id="nav" class="menu">
+            <a class="close-nav-btn fa fa-times" href="#top"></a>
+            <ul>
+                {% for page in site.pages %}
+                  {% if page.title %}
+                  {% unless page.hidden == true %}
+                  <li>
+                  <a href="{{ page.url | prepend: site.baseurl }}" class="inactive">
+                      {{ page.title }}
+                  </a>
+                  </li>
+                  {% endunless %}
+                  {% endif %}
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</header>

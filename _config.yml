@@ -1,0 +1,35 @@
+# Site settings
+title: Raphis website!
+email: hi@raphael.li
+description: > # this means to ignore newlines until "baseurl:"
+  My personal website and portfolio page.
+
+url: "http://raphael.li"
+github_username:  raphiz
+
+permalink: /:categories/:title/
+
+exclude:
+    - docker/       # Docker image to build this site
+    - README.md
+    - Makefile
+
+# Workaround - I run jekyll in docker :)
+host: 0.0.0.0
+
+assets:
+    gzip: true
+    compress:
+        # css: 'sass'
+        js: 'uglifier'
+
+
+gems:
+    - jekyll-less
+    - therubyracer
+    - jekyll-assets
+    - uglifier
+    - jekyll-sitemap
+
+markdown: redcarpet
+highlighter: pygments

@@ -1,0 +1,33 @@
+---
+layout: default
+title: Contact
+scripts: [openpgp.min, contact]
+---
+
+<center>You can reach me via the following channels</center>
+<br>
+
+
+<div style="font-size: 40px;text-align:center;">
+	<a href="http://www.enable-javascript.com/" class="fa fa-5 fa-envelope-o"  alt="email" id="mail-contact" title="Write me an email!"></a> &nbsp;&nbsp;
+	<a href="https://github.com/raphiz" class="fa fa-5 fa-github" target="_blank" alt="Github" title="Github Profile"></a> &nbsp;&nbsp;
+	<a href="https://bitbucket.org/raphizim" class="fa fa-5 fa-bitbucket"  target="_blank" title="Bitbucket Profile" alt="Bitbucket"></a> &nbsp;&nbsp;
+	<a href="https://keybase.io/raphiz" class="fa f-a5 fa-key" target="_blank" alt="Keybase" title="Keybase Profile"></a>
+</div>
+
+<br>
+
+<h2 style="text-align: center">Secure Communication</h2>
+<center>If you are familiar with <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" target="_blank">PGP</a>,
+	download my <a href="http://raphael.li/key.asc">public key</a>.</center>
+<br>
+<div id="crypto-container">
+<center> You can also encrypt a message to me directly in the browser and then copy it into an email!</center>
+
+ <textarea id="crypto-text-source" style="width:100%;height:200px;"></textarea>
+ <pre id="crypto-text-output" class="encryption-output copy-text"></pre>
+
+ <div class="button-bar">
+  <button id="show-crypto-output">Show encrypt text</button>
+ </div>
+</div>

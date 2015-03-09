@@ -1,0 +1,11 @@
+# robotstxt.org/
+
+User-agent: *
+Disallow: 
+Allow: /
+
+User-agent: FaceBook
+Disallow: /
+
+Sitemap: http://raphael.li/sitemap.xml
+

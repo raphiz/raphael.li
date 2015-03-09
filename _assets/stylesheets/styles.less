@@ -1,0 +1,400 @@
+@import (inline) "_normalize.min.css";
+@import "_config.less";
+// @import "_print.less";
+@import "_prefixer.less";
+@import (inline) "_font-awesome-4.1.0.min.css";
+@import (inline) "_github.css";
+
+
+body {
+    font-family: @font-family;
+    background-color: @background-color;
+    margin-top: 80px;
+    text-align: justify;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+
+    background-color: @header-background-color;
+
+    .container{
+
+        width: 250px;
+        border-bottom: 1px solid @heading-underline-color;
+
+        margin-right: auto;
+        margin-left: auto;
+        font-weight: bold;
+        // To upper case
+        text-transform: uppercase;
+        color: @header-font-color;
+
+        a {
+            color: @header-font-color
+        }
+
+        .logo{
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            display: inline-block;
+            .extension{
+                text-transform: lowercase;
+                // TODO: can i get the opacy in another way?
+                color: @second-header-font-color;
+            }
+        }
+
+        .menu{
+            font-size: 14px;
+            margin-top: 14px;
+            float: right;
+            ul{
+                padding: 0;
+            }
+            li {
+
+                line-height: 25px;
+
+                list-style: none;
+                a {
+                    text-transform: uppercase;
+                    transition: color 0.25s;
+                }
+
+                a:hover, .active {
+                    color: @second-header-font-color;
+                }
+            }
+        }
+
+    }
+}
+
+
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+
+    img {
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+}
+
+// - instead of dots for UL
+.wrapper {
+    ul {
+        padding-left:20px;
+        list-style:none;
+    }
+
+    li:before {
+        content: '- ';
+    }
+}
+
+// Custom, iPhone Retina
+@media only screen and (min-width : 320px) {
+    header .container, .wrapper{
+        width: 300px;
+    }
+}
+
+// Extra Small Devices, Phones
+@media only screen and (min-width : 480px) {
+    header .container, .wrapper{
+        width: 460px;
+    }
+}
+
+// Small Devices, Tablets
+@media only screen and (min-width : 768px) {
+
+    header .container, .wrapper{
+        width: 748px;
+    }
+
+    .logo {
+        float:left;
+    }
+
+    header .container {
+        border-bottom: none;
+    }
+
+    .menu {
+        display: inline-block;
+
+        ul {
+            margin: 0;
+
+            li {
+                padding-right: 15px;
+                display: inline;
+            }
+        }
+    }
+}
+.nav-btn, .close-nav-btn {
+    display: none!important;
+}
+
+.close-nav-btn {
+        background-color: @header-background-color;
+        width: 30px;
+        height: 30px;
+}
+
+@media only screen and (max-width : 768px) {
+
+    .nav-btn, .close-nav-btn {
+        display: inline-block!important;
+    }
+
+    .nav-btn {
+        float: right;
+        margin-top: 10px;
+        left: 30px;
+        font-size: 25px;
+    }
+    .menu ul {
+
+        float: left;
+        font-size: 16px;
+    }
+
+   .menu, .menu ul{
+
+        width:100%;
+        text-align: center;
+    }
+
+    #nav:not(:target) {
+        z-index: 1;
+        height: 0;
+        display: none;
+    }
+
+    #nav:target .close-nav-btn {
+        float: right;
+        display: block;
+        margin-top: -50.5px;
+        left: 30px;
+        font-size: 25px;
+    }
+}
+
+
+//    Generic styles
+
+a {
+    color: @heading-underline-color;
+    text-decoration: none;
+}
+
+pre, code {
+    background-color: white;
+    text-align: left;
+    font-family: @monospaced-font-family;
+}
+
+pre {
+
+    padding: 10px 20px 10px 20px;
+
+}
+
+// Override the background for hightlight.js
+
+.hljs {
+    background: none!important;
+}
+
+
+button {
+    box-shadow: none;
+
+    transition: background-color 0.25s;
+
+    transition-duration: 0.3s;
+    background: @button-color;
+    color: @font-color;
+    border: none;
+
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+
+    border-radius: 3px;
+}
+button:hover{
+    background: @button-color-hover;
+}
+
+//    Headings Typography
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    color: @font-color;
+}
+
+h1 {
+      text-align: center;
+}
+
+h1 {
+    font-size:28px;
+    line-height:36px;
+    margin-bottom:13px;
+
+    text-transform: uppercase;
+    margin: 0;
+
+}
+// A small "underline" below the headings
+h1:after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 150px;
+    margin: 8px auto 10px;
+    position: relative;
+    background: none repeat scroll 0% 0% @heading-underline-color;
+}
+
+h2 {
+    font-size:24px;
+    line-height:32px;
+    margin-bottom:13px;
+}
+
+h3 {
+    font-size:18px;
+    line-height:24px;
+    margin-bottom:20px;
+}
+
+h4 {
+    font-size:16px;
+    line-height:22px;
+    margin-bottom:20px;
+}
+
+h5 {
+    font-size:14px;
+    line-height:20px;
+    margin-bottom:15px;
+}
+
+h6 {
+    font-size:13px;
+    line-height:20px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+
+ul.work-list {
+    padding-left:20px;
+    list-style:none;
+
+    li {
+        margin-bottom:10px;
+    }
+    li:before {
+        font-family: 'FontAwesome';
+        margin:0 5px 0 -15px;
+    }
+
+}
+
+.experiments li:before {
+    content: '\f0c3';
+}
+
+.projects li:before {
+    content: '\f02d';
+}
+
+.resource:before {
+        content: '# ';
+        color: @second-header-font-color;
+}
+
+
+
+//img.me {
+//    float: left;
+//    width: 150px;
+//    border-radius: 50%;
+//
+//    shape-outside: circle();
+//    shape-margin: 15px;
+//}
+
+//::-moz-selection {
+//    background: #00b2ad;
+//    text-shadow: none;
+//}
+
+::selection {
+    background: #00b2ad;
+    text-shadow: none;
+}
+
+textarea {
+    border: 1px solid #c5c5c5;
+}
+
+.button-bar {
+    float: right;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+// For contact page
+#crypto-text-output, #crypto-text-source {
+    margin-top: 30px;
+    width: 100%;
+}
+#crypto-text-source {
+    height: 300px;
+}
+
+#crypto-text-output {
+    display: none;
+}
+
+#browser-encrypt{
+    display: none;
+}
+
+
+.copy-text {
+    position: relative;
+    display: block;
+}
+#copy-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: 1em;
+}

@@ -1,0 +1,36 @@
+---
+layout: default
+title: Work
+---
+<h1>Work</h1>
+<p>
+    I devided my projects into two categories: projects and experiments.
+</p>
+
+<p>
+    Projects are supposed to be maintained and continously improved.
+    By contrast, experiments are a proof of concept or just for fun.
+</p>
+
+<h2>Projects</h2>
+<ul class="work-list projects">
+{% for project in site.categories['projects'] %}
+{% if project.type == "project" %}
+<li>
+<a href="{{project.url}}">{{project.title}}</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+
+
+<h2>Experiments</h2>
+<ul class="work-list experiments">
+{% for project in site.categories['projects'] %}
+{% if project.type == "experiment" %}
+<li>
+<a href="{{project.url}}">{{project.title}}</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
