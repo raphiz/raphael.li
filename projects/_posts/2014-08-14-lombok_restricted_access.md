@@ -4,9 +4,10 @@ title: Lombok restricted access
 type: experiment
 github: https://github.com/raphiz/lombok_restricted_access
 teaser: Custom Access Modifiers with Lombok
+initiation: 2014
 ---
 
-The idea is to build something like [Kohsuke Kawaguchi's  Custom Access Modifier](http://www.kohsuke.org/access-modifier/) 
+The idea is to build something like [Kohsuke Kawaguchi's  Custom Access Modifier](http://www.kohsuke.org/access-modifier/)
 as a custom [lombok](http://projectlombok.org/) handler. When using lombok, no Maven-Plugins or any other build magic is required - just
 adding the dependencies and it works.
 

@@ -6,3 +6,4 @@ Personal website and portfolio, built with Jekyll.
 * Migrate less to sass (+ allow minifier via assets plugin)
 * Put more stuff on the index
 * Media print css
+* Add status & initiation to the project list
