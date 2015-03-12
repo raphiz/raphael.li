@@ -16,7 +16,7 @@ At compile time, lombok's magic injects a check if the caller of the method/cons
 If not, an RuntimeException is thrown.
 
 ```java
-   package my.private.api.internal;
+package my.private.api.internal;
    public class PrivateAPI {
     @RestrictedAccess("my.private.api")
     public PrivateAPI() {
@@ -26,11 +26,11 @@ If not, an RuntimeException is thrown.
 ```
 
 ```java
-    package third.party.app;
-    ...
-       new PrivateApi().doStuff()
-    ...
-    }
+package third.party.app;
+...
+   new PrivateApi().doStuff()
+...
+}
 ```
 
 A working example can be found in the sub project *example_usage*
