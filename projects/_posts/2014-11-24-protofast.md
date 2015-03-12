@@ -14,7 +14,7 @@ I use this to design a plain HTML layout before I start to write any code. The p
 
 Let's take a look at a practical example on how protofast works:
 
-Therefore, let's create a basic `index.php` 
+Therefore, let's create a basic `index.php`
 
 ```php
 <?php
@@ -24,7 +24,7 @@ require_once "vendor/protofast.php";
 // Create a new "Site"
 $site = new protofast\HTMLPage();
 
-// Set a title for the site and declare some additional scripts and 
+// Set a title for the site and declare some additional scripts and
 // stylesheets
 $site->setTitle("Home");
 $site->addStylesheet("stylesheets/specific_index.css");
@@ -37,7 +37,8 @@ $site->render();
 As you can see, you can declare custom stylesheets, scripts and other properties in a readable and maintainable fashion.
 
 Let's take a look on the template part. Templates are located in the `templates/` folder relative to the `index.php` file.
-There must be a file called `base.html` which is - you guess it - the base of every template. 
+There must be a file called `base.html` which is - you guess it - the base of every template.
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -61,7 +62,6 @@ There must be a file called `base.html` which is - you guess it - the base of ev
     </div>
   </body>
 </html>
-
 ```
 
 Each site extends this  `base.html` file. We can specify an `index.html` template for our example `index.php` file within the `template/` folder.
@@ -73,5 +73,3 @@ Each site extends this  `base.html` file. We can specify an `index.html` templat
 ```
 
 Checkout the full example project and more documentation on [Github](https://github.com/raphiz/protofast/tree/master/example_project).
-
-
