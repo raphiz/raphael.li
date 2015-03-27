@@ -16,5 +16,4 @@ make serve # serve the page (at 0.0.0.0:4000)
 ## To be done:
 * Migrate less to sass (+ allow minifier via assets plugin)
 * Put more stuff on the index
-* Media print css
 * Add status & initiation to the project list
