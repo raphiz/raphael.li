@@ -5,6 +5,7 @@ type: experiment
 github: https://github.com/raphiz/lombok_restricted_access
 teaser: Custom Access Modifiers with Lombok
 initiation: 2014
+status: inactive
 ---
 
 The idea is to build something like [Kohsuke Kawaguchi's  Custom Access Modifier](http://www.kohsuke.org/access-modifier/)

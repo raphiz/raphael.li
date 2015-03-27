@@ -5,10 +5,14 @@ type: project
 github: https://github.com/raphiz/protofast
 teaser: Quickly create HTML mockups without duplicating code
 initiation: 2014
+status: inactive
 ---
 Protofast is an easy to use solution to quickly create ambitious HTML mockup websites with PHP.
 
 I use this to design a plain HTML layout before I start to write any code. The project's stakeholder can play around with this prototype and give instant feedback concerning the UI. Experiments with new UI-Concepts are cheaper this way. When the final draft is accepted by all parties, the actual implementation begins.
+
+To be honest, there are easier ways to build interactive html mockups - probably with frameworks or tools that you are more familiar with.
+This project was not created to serve a wide audience - it was primarily a task to sharpen my PHP skills.
 
 ## An example
 

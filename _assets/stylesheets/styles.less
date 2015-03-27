@@ -314,7 +314,19 @@ ul.work-list {
         margin:0 5px 0 -15px;
     }
 
+    // Fade color for inactive projects...
+    .inactive a {
+        color: fade(@second-header-font-color, 50%);
+    }
+
+    // Initiation (after the poject name)
+    .initiation {
+        color: fade(@font-color, 50%);
+        font-size: 0.7em;
+    }
+
 }
+
 
 .experiments li:before {
     content: '\f0c3';
@@ -327,6 +339,12 @@ ul.work-list {
 .resource:before {
         content: '# ';
         color: @second-header-font-color;
+}
+
+.project_status {
+    font-size: 0.8em;
+    color: fade(@font-color, 50%);
+    text-align: center;
 }
 
 

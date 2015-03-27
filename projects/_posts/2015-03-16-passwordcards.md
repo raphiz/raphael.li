@@ -7,6 +7,7 @@ website: http://passwordcards.raphael.li/
 teaser: Generate customized password cards in the spirit of Qwertycards.com
 initiation: 2015
 permalink: /pwcard
+status: maintained
 ---
 
 Passwordcards allows you to generate customized password cards in the spirit of Qwertycards.com

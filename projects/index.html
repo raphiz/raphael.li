@@ -16,8 +16,8 @@ title: Work
 <ul class="work-list projects">
 {% for project in site.categories['projects'] %}
 {% if project.type == "project" %}
-<li>
-<a href="{{project.url}}">{{project.title}}</a>
+<li class="{{project.status | replace:' ','_'}}">
+<a  href="{{project.url}}">{{project.title}}</a> <span class="initiation">{{project.initiation}}</span>
 </li>
 {% endif %}
 {% endfor %}
@@ -29,7 +29,7 @@ title: Work
 {% for project in site.categories['projects'] %}
 {% if project.type == "experiment" %}
 <li>
-<a href="{{project.url}}">{{project.title}}</a>
+<a href="{{project.url}}">{{project.title}}</a> <span class="initiation">{{project.initiation}}</span>
 </li>
 {% endif %}
 {% endfor %}

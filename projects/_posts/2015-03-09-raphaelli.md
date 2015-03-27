@@ -6,6 +6,7 @@ github: https://github.com/raphiz/raphael.li
 website: http://raphael.li
 teaser: My personal website and portfolio page
 initiation: 2015
+status: active
 ---
 
 Raphael.li is my personal website and protfolio page. It's built with [Jekyll](http://jekyllrb.com/).
