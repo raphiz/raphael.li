@@ -13,6 +13,7 @@ exclude:
     - docker/       # Docker image to build this site
     - README.md
     - Makefile
+    - deploy.sh
 
 # Workaround - I run jekyll in docker :)
 host: 0.0.0.0
