@@ -3,59 +3,38 @@ layout: post
 title: Custom DDNS Service Provider
 tags: synology
 ---
-The [Synologys DSM operating system](https://www.synology.com/en-us/dsm/) allows you to configure [dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) in a very simple way. The problem is that most of the listed provides do not suit well for private users. I tried most of those that are built-in to DSM. All of them want you to log-in once every month (DynDNS or noip to name just two of them) or to pay them a ton of money.
+The [Synologys DSM operating system](https://www.synology.com/en-us/dsm/) allows you to configure [dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) in a very simple way. The problem is that most of the listed provides do not suit well for private users. I tried most of the built-in ones. All of them want you to log-in once every month (DynDNS or noip to name just two of them) or to pay a ridiculous amount of money.
 Meanwhile, I stumbled over a nice service called [nsupdate.info](http://nsupdate.info/). It's simple, free, open source and awesome!
 
-## Let's get started
-There are two files that must be modified on the file system to add a new DDNS provider: `/etc/ddns_provider.conf` and `/etc.defaults/ddns_provider.conf`. You can do this by logging in via SSH and use VI or use tools like [Config File Editor](http://www.mertymade.com/syno/#cfe). I encourage you to use the latter.
+I tried to add custom dynDNS providers directly in system configuration files - which worked but was overriden on almost every update. The built-in updater does also have another drawback: The DynDNS deamon notifies the service provider every night which might triggers an abuse alert. 
 
-All you have to do is to append the following configuration to both of the above-mentioned files, no modifications required.
+There is a simpler solution! Please note that this article assumes that you use nsupdate.info as dynamic dns priovider. However, you should be able to adapt this easily for other service providers.
 
-```ini
-[nsupdate]
-modulepath=DynDNS
-queryurl=ipv4.nsupdate.info/nic/update?hostname=__HOSTNAME__&myip=__MYIP__&system=dyndns&wildcard=NOCHG&mx=NOCHG&backmx=NOCHG
-```
+If not yet done, create a new account on [nsupdate.info](http://nsupdate.info/) and register a new host. Save the secret for later use.
 
-Please be advised that this works with IPv4 only! (Btw. I just copied the DynDNS section and replaced the hostname in the queryurl because nsupdate is dyndns2 compatible)
+{% image resources/synology/dyn/001.png %}
 
-`nsupdate` will now appear in the list of available DDNS providers. Click `add` in `External Access -> DDNS` and configure the new service provider.
+Next, download the following script and modify the two variables on top. `DOMAIN` is your full nsupdate domain name and `TOKEN` is the secret that you saved before.
+
+<script src="https://gist.github.com/raphiz/837453f189dca966a69c.js"></script>
+
+Having that done, it's time to move the script on the synology box. This can in any folder - I called my one `scripts`.
+
+Now let's login on the web interface, open the control panel and select `Task Scheduler`. Create a new  `User-defined script`. Give it a name and provide the path to your script. Note that this might differ depending on your setup.
 
 {% image resources/synology/dyn/002.png %}
 
-__Note that the required password is not your nsupdate password!__ You can get the password/token from the nsupdate website. It's called a `Generated Host Secret` and is presented to you after adding a new host. It is regenerated when clicking on the `Show Configuration` button on the host dashboard.
+Choose how often the script is called in the `schedule` tab - I chose to do it twice a day. Save it afterwards.
 
-{% image resources/synology/dyn/004.png %}
+It's time to test. Select the newly created task in the list and click on `run`. When it's done, open the folder where you placed the script where you will find a file called `log.txt`. It's content should be similar to this:
 
-After configuring the DDNS provider settings, the `Status` section should display `Normal` (or similar). You can also verify if everything worked by visiting nsupdate's dashboard
-
-{% image resources/synology/dyn/001.png %}
-{% image resources/synology/dyn/003.png %}
-
-If you want to script this procedure, override the `/etc/ddns.conf` and `/etc.defaults/ddns.conf` which contains the configuration of your DDNS provider.
-
-```ini
-#If you want to change DDNS Name, remember to change upnpd.c,
-#remember to consider updating problem.
-[nsupdate]
-hostname=mydomain.nsupdate.info
-passwd=Top Secret!
-net=DEFAULT
-status=
-ip=00.00.00.00
-service=true
-username=mydomain.nsupdate.info
-enable_heartbeat=no
-provider=nsupdate
-ipv6=0:0:0:0:0:0:0:0
+```
+----------------------------
+Mon Jun  1 12:01:30 CEST 2015
+The current external IP is: X.X.X.X
+The following IP is regitered: X.X.X.X
+no update required
 ```
 
-## The downside
-DSM Updates might break this! It's unclear to me why updates override both `ddns_provider.conf` files.
-You can detect this if the `External Access -> DDNS` displays neither a service provider nor a status.
+That's all, have fun!
 
-{% image resources/synology/dyn/005.png %}
-
-Let's hope this gets fixed soon!
-
-Happy hacking!
