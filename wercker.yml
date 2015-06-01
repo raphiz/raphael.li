@@ -1,4 +1,4 @@
-box: raphiz/mathe.raphael.li
+box: raphiz/raphael.li
 build:
     steps:
       - script:
