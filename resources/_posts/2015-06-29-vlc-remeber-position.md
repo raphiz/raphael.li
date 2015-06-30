@@ -23,6 +23,6 @@ Restart VLC and go into the preferences (Check `Show all preferences`). Check th
 
 <small>(Screenshot taken from vlcsrposplugin.sourceforge.net)</small>
 
-For more information, checkout the the [VLC srpos plugin Website](http://vlcsrposplugin.sourceforge.netP/)
+For more information, checkout the the [VLC srpos plugin Website](http://vlcsrposplugin.sourceforge.net/)
 
 Happy watching!
