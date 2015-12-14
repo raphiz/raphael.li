@@ -1,8 +1,13 @@
 
 RewriteEngine on
 AddHandler application/x-httpd-php55 .php
+
+RewriteCond %{HTTPS} =off
+RewriteRule ^ https://%{REQUEST_URI} [QSA,L,R=301]
+
+
 RewriteCond %{HTTP_HOST} ^www\.raphael\.li$
-RewriteRule ^/?$ "http\:\/\/raphael\.li\/" [R=301,L]
+RewriteRule ^/?$ "https\:\/\/raphael\.li\/" [R=301,L]
 
 # Redirect 404
 ErrorDocument 404 /404.html
