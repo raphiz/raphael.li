@@ -1,13 +1,12 @@
-@import (inline) "_normalize.min.css";
-@import "_config.less";
-@import "_prefixer.less";
-@import (inline) "_font-awesome-4.1.0.min.css";
-@import (inline) "_github.css";
-
+@import "normalize.min.css.scss";
+@import "_normalize.min.css.scss";
+@import "_font-awesome-4.1.0.min.css.scss";
+@import "_github.css.scss";
+@import "config";
 
 body {
-    font-family: @font-family;
-    background-color: @background-color;
+    font-family: $font-family;
+    background-color: $background-color;
     margin-top: 80px;
     text-align: justify;
 }
@@ -20,22 +19,22 @@ header {
     z-index: 1000;
 
 
-    background-color: @header-background-color;
+    background-color: $header-background-color;
 
     .container{
 
         width: 250px;
-        border-bottom: 1px solid @heading-underline-color;
+        border-bottom: 1px solid $heading-underline-color;
 
         margin-right: auto;
         margin-left: auto;
         font-weight: bold;
         // To upper case
         text-transform: uppercase;
-        color: @header-font-color;
+        color: $header-font-color;
 
         a {
-            color: @header-font-color
+            color: $header-font-color
         }
 
         .logo{
@@ -47,7 +46,7 @@ header {
             .extension{
                 text-transform: lowercase;
                 // TODO: can i get the opacy in another way?
-                color: @second-header-font-color;
+                color: $second-header-font-color;
             }
         }
 
@@ -69,7 +68,7 @@ header {
                 }
 
                 a:hover, .active {
-                    color: @second-header-font-color;
+                    color: $second-header-font-color;
                 }
             }
         }
@@ -84,6 +83,7 @@ header {
 
     img {
         max-width: 100%;
+        height: auto;
         margin-right: auto;
         margin-left: auto;
 
@@ -149,7 +149,7 @@ header {
 }
 
 .close-nav-btn {
-        background-color: @header-background-color;
+        background-color: $header-background-color;
         width: 30px;
         height: 30px;
 }
@@ -197,14 +197,14 @@ header {
 //    Generic styles
 
 a {
-    color: @heading-underline-color;
+    color: $heading-underline-color;
     text-decoration: none;
 }
 
 pre, code {
     background-color: white;
     text-align: left;
-    font-family: @monospaced-font-family;
+    font-family: $monospaced-font-family;
 }
 
 pre {
@@ -226,8 +226,8 @@ button {
     transition: background-color 0.25s;
 
     transition-duration: 0.3s;
-    background: @button-color;
-    color: @font-color;
+    background: $button-color;
+    color: $font-color;
     border: none;
 
     height: 35px;
@@ -237,13 +237,13 @@ button {
     border-radius: 3px;
 }
 button:hover{
-    background: @button-color-hover;
+    background: $button-color-hover;
 }
 
 //    Headings Typography
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
-    color: @font-color;
+    color: $font-color;
 }
 
 h1 {
@@ -267,7 +267,7 @@ h1:after {
     width: 150px;
     margin: 8px auto 10px;
     position: relative;
-    background: none repeat scroll 0% 0% @heading-underline-color;
+    background: none repeat scroll 0% 0% $heading-underline-color;
 }
 
 h2 {
@@ -316,12 +316,12 @@ ul.work-list {
 
     // Fade color for inactive projects...
     .inactive a {
-        color: fade(@second-header-font-color, 50%);
+        color: fade($second-header-font-color, 50%);
     }
 
     // Initiation (after the poject name)
     .initiation {
-        color: fade(@font-color, 50%);
+        color: fade($font-color, 50%);
         font-size: 0.7em;
     }
 
@@ -338,12 +338,12 @@ ul.work-list {
 
 .resource:before {
         content: '# ';
-        color: @second-header-font-color;
+        color: $second-header-font-color;
 }
 
 .project_status {
     font-size: 0.8em;
-    color: fade(@font-color, 50%);
+    color: fade($font-color, 50%);
     text-align: center;
 }
 
@@ -381,7 +381,6 @@ textarea {
 // For contact page
 #crypto-text-output, #crypto-text-source {
     margin-top: 30px;
-    width: 100%;
 }
 #crypto-text-source {
     height: 300px;
@@ -417,4 +416,4 @@ textarea {
 }
 
 
-@import "_print.less";
+@import "print";

@@ -1,19 +1,19 @@
 FROM ruby
 
 RUN apt-get update
-RUN apt-get install -y node python-pygments
-RUN gem install jekyll rdiscount kramdown
+RUN apt-get install -y node
 
 # Install lftp for deployment
 RUN apt-get install lftp
 
 # Install addons
+RUN gem install jekyll
 RUN gem install jekyll-assets
-RUN gem install jekyll-less
-RUN gem install therubyracer
-RUN gem install uglifier
 RUN gem install jekyll-sitemap
-
+RUN gem install redcarpet
+RUN gem install rouge
+RUN gem install uglifier
+RUN gem install therubyracer
 
 # Working directory
 RUN mkdir /src
