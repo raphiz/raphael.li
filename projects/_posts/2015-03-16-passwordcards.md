@@ -10,7 +10,7 @@ permalink: /pwcard
 status: maintained
 ---
 
-Passwordcards allows you to generate customized password cards in the spirit of Qwertycards.com
+Password cards allows you to generate customized password cards in the spirit of Qwertycards.com
 
 {% image projects/passwordcards/cards.png %}
 

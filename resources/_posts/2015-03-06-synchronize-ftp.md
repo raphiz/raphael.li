@@ -28,8 +28,8 @@ The number one recommendation I found for a bi-directional `rsync` alike tool is
 `Unison` is one of those tools that are very easy to use and just work out of the box.
 
 I wrote a very basic script that performs a synchronization of a local directory and a remote ftp server.
-To get started, we have to install Unison. The setup also requires
-`curlftpfs` beacause `Unison` is not able to sync over ftp.
+To get started, we have to install Unison. The set up also requires
+`curlftpfs` because `Unison` is not able to sync over ftp.
 
 ```bash
 $ sudo pacman -S unison curlftpfs # on Arch
