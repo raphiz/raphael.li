@@ -33,7 +33,7 @@ echo "Uploading..."
 lftp -e "
 open $HOST
 set ssl:verify-certificate no
-set ftp:ssl-allow off
+set ssl:check-hostname off
 set cmd:fail-exit true
 user $USER $PASSWORD
 cd $DIRECTORY
