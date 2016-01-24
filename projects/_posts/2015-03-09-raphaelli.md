@@ -15,7 +15,7 @@ The code is open source - feel free to copy my work!
 
 My vision for this website is to publish things I learn and make it available everyone. It should also be a place where my work can be explored.
 
-I don't like the concept of a blog very much because I think it's not user friendly to explore - that's why I created a "resource" page where my posts can be explored by tags instead of an endless stream sorted by date.
+I don't like the concept of a blog very much because I think it's not user friendly to explore - that's why I created a "tips" page where my posts can be explored by tags instead of an endless stream sorted by date.
 
 {% image projects/raphaelli/resources.png %}
 

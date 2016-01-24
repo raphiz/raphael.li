@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Resources
+title: Tips
 ---
 {% for tag in site.tags %}
     <h3 class="resource">{{tag[0]}}<h3>
     <ul>
-    {% for entry in site.categories['resources'] %}
+    {% for entry in site.categories['tips'] %}
         {% if entry.tags contains tag[0] %}
             <li><a href="{{entry.url}}">{{entry.title}}<a></li>
         {% endif %}

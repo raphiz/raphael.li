@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Convert docx to PDF
-tags: linux
+tags: tools
 ---
 I used to get lots of mails with Microsoft Word Documents attached. I just had to read and print them - editing was not required. Libreoffice did quite a good Job displaying `doc` files but it still struggles with the `docx` file format introduced in Office 2007(!!).
 
