@@ -9,7 +9,7 @@ RewriteRule ^ https://%{REQUEST_URI} [QSA,L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.raphael\.li$
 RewriteRule ^/?$ "https\:\/\/raphael\.li\/" [R=301,L]
 
-RedirectMatch 301 resources/(.*) tips/$1
+RedirectMatch 301 ^/raphael.li/resources/(.*) /tips/$1
 
 # Redirect 404
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404/
