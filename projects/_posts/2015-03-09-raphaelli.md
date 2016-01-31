@@ -3,7 +3,7 @@ layout: project
 title: Website "raphael.li"
 type: project
 github: https://github.com/raphiz/raphael.li
-website: http://raphael.li
+website: http://www.raphael.li
 teaser: My personal website and portfolio page
 initiation: 2015
 status: active
