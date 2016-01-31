@@ -6,8 +6,8 @@ RewriteCond %{HTTPS} =off
 RewriteRule ^ https://%{REQUEST_URI} [QSA,L,R=301]
 
 
-RewriteCond %{HTTP_HOST} ^www\.raphael\.li$
-RewriteRule ^/?$ "https\:\/\/raphael\.li\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^raphael.li [NC]
+RewriteRule ^(.*)$ http://www.raphael.li/$1 [L,R=301,NC]
 
 RedirectMatch 301 ^/raphael.li/resources/(.*) /tips/$1
 
