@@ -1,6 +1,6 @@
 
 RewriteEngine on
-AddHandler application/x-httpd-php55 .php
+AddHandler application/x-httpd-php56 .php
 
 RewriteCond %{HTTPS} =off
 RewriteRule ^ https://%{REQUEST_URI} [QSA,L,R=301]
