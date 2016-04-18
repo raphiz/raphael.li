@@ -115,7 +115,7 @@
          */
         getMailtToAddress : function () {
             var greeting = 'hi',
-                host = window.location.host,
+                host = window.location.host.split('.').slice(1).join('.'),
                 sign = String.fromCharCode(64),
                 what = "mail",
                 addr = what + "to:" + greeting + sign  + host;
