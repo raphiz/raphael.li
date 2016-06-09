@@ -1,0 +1,10 @@
+services:
+  - docker
+
+script:
+  - mkdir _site/
+  - chmod 777 _site/
+  - make buildimage build
+
+after_success:
+  - make --quiet deploy
