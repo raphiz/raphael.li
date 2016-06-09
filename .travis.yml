@@ -3,7 +3,9 @@ services:
 
 script:
   - mkdir _site/
+  - mkdir .asset-cache/
   - chmod 777 _site/
+  - chmod 777 .asset-cache/
   - make buildimage build
 
 after_success:
