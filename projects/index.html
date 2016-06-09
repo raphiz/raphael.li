@@ -3,14 +3,6 @@ layout: default
 title: Projects
 ---
 <h1>Projects</h1>
-<p>
-    I divided my projects into two categories: projects and experiments.
-</p>
-
-<p>
-    Projects are supposed to be maintained and continuously improved.
-    By contrast, experiments are a proof of concept or just for fun.
-</p>
 
 <h2>Projects</h2>
 <ul class="work-list projects">
@@ -23,6 +15,16 @@ title: Projects
 {% endfor %}
 </ul>
 
+<h2>Open Source Contributions</h2>
+<ul class="work-list contributions">
+{% for project in site.categories['projects'] %}
+{% if project.type == "contribution" %}
+<li>
+<a href="{{project.url}}">{{project.title}}</a> <span class="initiation">{{project.initiation}}</span>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
 
 <h2>Experiments</h2>
 <ul class="work-list experiments">
@@ -34,3 +36,8 @@ title: Projects
 {% endif %}
 {% endfor %}
 </ul>
+
+<p>
+    More of my projects and scripts are on <a href="https://github.com/raphiz/">Github</a>
+    and <a href="https://gist.github.com/raphiz/">GithubGist</a>
+</p>

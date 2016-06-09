@@ -11,6 +11,21 @@ body {
     text-align: justify;
 }
 
+table th {
+  padding-right: 3em;
+
+}
+
+table td {
+  border-bottom: 1px solid;
+  padding-top: 1em;
+  padding: 0.5em 0em 0.5em 0em;
+}
+
+table code {
+    padding-right: 0.5em;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -330,6 +345,10 @@ ul.work-list {
 
 .experiments li:before {
     content: '\f0c3';
+}
+
+.contributions li:before {
+    content: '\f004';
 }
 
 .projects li:before {

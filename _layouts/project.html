@@ -18,8 +18,15 @@
             {% endif %}
         </div>
         <div class="project_status">
+          {% if page.status %}
           Status: <span class="status_{{page.status | replace:' ','_'}}">{{page.status}}</span><br>
+          {% endif %}
+          {% if page.initiation %}
           Initiation: {{page.initiation}}
+          {% endif %}
+          {% if page.period %}
+          {{page.period}}
+          {% endif %}
         </div>
         {{ content }}
     </div>
