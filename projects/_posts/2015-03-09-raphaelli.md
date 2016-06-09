@@ -19,6 +19,6 @@ I don't like the concept of a blog very much because I think it's not user frien
 
 {% image projects/raphaelli/resources.png %}
 
-Another goal was to allow everyone to contact me securely. I created a secure communication section on the contact page which makes this very easy. It's probably not super secure but better than no encryption at all!
+Another goal was to allow everyone to contact me securely. I created a secure communication section on the contact page which makes this very easy.
 
 {% image projects/raphaelli/contact.png %}
