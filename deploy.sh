@@ -27,19 +27,22 @@ fi
 cd "$DIR/_site/"
 
 
-# TODO: allow SFTP
-# TODO: allow verify cert
 echo "Uploading..."
-lftp -e "
-open $HOST
-set ssl:verify-certificate no
-set ssl:check-hostname off
-set cmd:fail-exit true
-user $USER $PASSWORD
-cd $DIRECTORY
-mirror --reverse --delete --verbose --parallel . .
-bye
-"
+# TODO: SSL does currently not work on cyon :(
+
+# lftp -d -e "
+# open $HOST
+# set ftp:ssl-auth TLS
+# set ftp:ssl-allow true
+# set ssl:verify-certificate yes
+# set ssl:check-hostname off
+# set ftp:ssl-protect-data true
+# set cmd:fail-exit true
+# user \"$USER\" \"$PASSWORD\"
+# mirror --reverse --delete --ignore-time --verbose --parallel . .
+# bye
+# "
+echo "BROKEN!"
 
 # Complete!
 echo "Done!"
