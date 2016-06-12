@@ -367,15 +367,17 @@ ul.work-list {
 }
 
 
+.index {
+    text-align: center;   
+}
 
-//img.me {
-//    float: left;
-//    width: 150px;
-//    border-radius: 50%;
-//
-//    shape-outside: circle();
-//    shape-margin: 15px;
-//}
+img.me {
+   width: 150px;
+   border-radius: 50%;
+   display: inherit;
+   shape-outside: circle();
+   shape-margin: 15px;
+}
 
 //::-moz-selection {
 //    background: #00b2ad;
