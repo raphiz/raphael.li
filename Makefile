@@ -12,4 +12,4 @@ serve:
 	docker run --rm --name raphael.li -u jekyll -v $(shell pwd):/src/ -p 4000:4000 raphiz/raphael.li jekyll serve
 
 deploy:
-	docker run -i -t --rm --name raphael.li -v $(shell pwd):/src/  -e "HOST=$(HOST)" -e "USER=$(USER)" -e "PASSWORD=$(PASSWORD)" -e "DIRECTORY=$(DIRECTORY)" raphiz/raphael.li /src/deploy.py
+	docker run -i -t --rm --name raphael.li -v $(shell pwd):/src/  -e "FTP_HOST=$(FTP_HOST)" -e "FTP_USER=$(FTP_USER)" -e "FTP_PASSWORD=$(FTP_PASSWORD)" -e "FTP_DIRECTORY=$(FTP_DIRECTORY)" raphiz/raphael.li /src/deploy.py
