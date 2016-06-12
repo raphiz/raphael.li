@@ -3,8 +3,8 @@ FROM ruby:2.3
 RUN apt-get update
 RUN apt-get install --force-yes -y node
 
-# Install lftp for deployment
-RUN apt-get install lftp
+# Python for FTP deployment...
+RUN apt-get install --force-yes -y python3
 
 # Install addons
 RUN gem install jekyll
