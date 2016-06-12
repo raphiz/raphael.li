@@ -12,8 +12,8 @@ exclude:
     - docker/
     - README.md
     - Makefile
-    - deploy.sh
-    - wercker.yml
+    - deploy.py
+    - .travis.yml
 
 host: 0.0.0.0
 
