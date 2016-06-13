@@ -1,12 +1,13 @@
 
 RewriteEngine on
 
-RewriteCond %{HTTPS} =off
-RewriteRule ^ https://%{REQUEST_URI} [QSA,L,R=301]
-
+Header set Strict-Transport-Security "max-age=3600"
 
 RewriteCond %{HTTP_HOST} ^raphael.li [NC]
 RewriteRule ^(.*)$ https://www.raphael.li/$1 [L,R=301,NC]
+
+RewriteCond %{HTTPS} =off
+RewriteRule ^ https://%{REQUEST_URI} [QSA,L,R=301]
 
 RedirectMatch 301 ^/raphael.li/resources/(.*) /tips/$1
 
