@@ -9,8 +9,8 @@ RewriteRule ^ https://%{REQUEST_URI} [QSA,L,R=301]
 RewriteCond %{HTTP_HOST} ^raphael.li [NC]
 RewriteRule ^(.*)$ https://www.raphael.li/$1 [L,R=301,NC]
 
-# HSTS Header
-Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+# HSTS Header - only when using https
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 
 # Legacy rediret
 RedirectMatch 301 ^/raphael.li/resources/(.*) /tips/$1
