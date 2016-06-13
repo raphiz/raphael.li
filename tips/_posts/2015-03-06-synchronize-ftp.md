@@ -24,7 +24,7 @@ comes to fetch changes from the server that were not done with git.
 I started to think about `rsync`, but `rsync` is focused on one directional synchronizations.
 
 ## The solution
-The number one recommendation I found for a bi-directional `rsync` alike tool is [Unison](http://www.cis.upenn.edu/~bcpierce/unison/).
+The number one recommendation I found for a bi-directional `rsync` alike tool is [Unison](https://www.cis.upenn.edu/~bcpierce/unison/).
 `Unison` is one of those tools that are very easy to use and just work out of the box.
 
 I wrote a very basic script that performs a synchronization of a local directory and a remote ftp server.

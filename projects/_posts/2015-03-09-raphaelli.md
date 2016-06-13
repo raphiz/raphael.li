@@ -3,13 +3,13 @@ layout: project
 title: Website "raphael.li"
 type: project
 github: https://github.com/raphiz/raphael.li
-website: http://www.raphael.li
+website: https://www.raphael.li
 teaser: My personal website and portfolio page
 initiation: 2015
 status: active
 ---
 
-Raphael.li is my personal website and portfolio page. It's built with [Jekyll](http://jekyllrb.com/).
+Raphael.li is my personal website and portfolio page. It's built with [Jekyll](https://jekyllrb.com/).
 
 The code is open source - feel free to copy my work!
 

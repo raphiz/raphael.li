@@ -1,11 +1,10 @@
 # robotstxt.org/
 
 User-agent: *
-Disallow: 
+Disallow:
 Allow: /
 
 User-agent: FaceBook
 Disallow: /
 
-Sitemap: http://raphael.li/sitemap.xml
-
+Sitemap: https://raphael.li/sitemap.xml

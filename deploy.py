@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# This is a modified version of Hashsync (http://thb.lt/blog/2013/fast-ftp-sync-for-jekyll.html)
+# This is a modified version of Hashsync (https://thb.lt/blog/2013/fast-ftp-sync-for-jekyll.html)
 # based on Thibault Polge - modifications by Raphael Zimmermann <hi@raphael.li>
 #
-# Copyright (c) 2012-2013 Thibault Polge <http://thb.lt>. All rights reserved.
+# Copyright (c) 2012-2013 Thibault Polge <https://thb.lt>. All rights reserved.
 #
-# This program is free software: GPL version 3 or later <http://www.gnu.org/licenses/>.
+# This program is free software: GPL version 3 or later <https://www.gnu.org/licenses/>.
 #
 
 import ftplib

@@ -4,13 +4,13 @@ title: Custom DDNS Service Provider
 tags: synology
 ---
 The [Synologys DSM operating system](https://www.synology.com/en-us/dsm/) allows you to configure [dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) in a very simple way. The problem is that most of the listed provides do not suit well for private users. I tried most of the built-in ones. All of them want you to log-in once every month (DynDNS or noip to name just two of them) or to pay a ridiculous amount of money.
-Meanwhile, I stumbled over a nice service called [nsupdate.info](http://nsupdate.info/). It's simple, free, open source and awesome!
+Meanwhile, I stumbled over a nice service called [nsupdate.info](https://www.nsupdate.info/). It's simple, free, open source and awesome!
 
 I tried to add custom dynDNS providers directly in system configuration files - which worked but was overridden on almost every update. The built-in updater does also have another drawback: The DynDNS demon notifies the service provider every night which might triggers an abuse alert.
 
 There is a simpler solution! Please note that this article assumes that you use nsupdate.info as dynamic dns provider. However, you should be able to adapt this easily for other service providers.
 
-If not yet done, create a new account on [nsupdate.info](http://nsupdate.info/) and register a new host. Save the secret for later use.
+If not yet done, create a new account on [nsupdate.info](https://www.nsupdate.info/) and register a new host. Save the secret for later use.
 
 {% image resources/synology/dyn/001.png %}
 

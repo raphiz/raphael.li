@@ -3,7 +3,7 @@ title: Raphis website!
 description: >
   My personal website and portfolio page.
 
-url: "http://www.raphael.li"
+url: "https://www.raphael.li"
 github_username:  raphiz
 
 permalink: /:categories/:title/

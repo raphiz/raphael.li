@@ -9,7 +9,7 @@ status: inactive
 ---
 
 The idea is to build something like [Kohsuke Kawaguchi's  Custom Access Modifier](http://www.kohsuke.org/access-modifier/)
-as a custom [Lombok](http://projectlombok.org/) handler. When using Lombok, no Maven-Plugins or any other build magic is required - just
+as a custom [Lombok](https://projectlombok.org/) handler. When using Lombok, no Maven-Plugins or any other build magic is required - just
 adding the dependencies and it works.
 
 You annotate the methods that shall not be called outside of your Framework with the RestrictedAccess annotation.
