@@ -1,14 +1,18 @@
 
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} ^raphael.li [NC]
-RewriteRule ^(.*)$ https://www.raphael.li/$1 [L,R=301,NC]
-
+# Redirect to HTTPs
 RewriteCond %{HTTPS} =off
 RewriteRule ^ https://%{REQUEST_URI} [QSA,L,R=301]
 
+# Redirect raphael.li to www.raphael.li
+RewriteCond %{HTTP_HOST} ^raphael.li [NC]
+RewriteRule ^(.*)$ https://www.raphael.li/$1 [L,R=301,NC]
+
+# HSTS Header
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
+# Legacy rediret
 RedirectMatch 301 ^/raphael.li/resources/(.*) /tips/$1
 
 # Redirect 404
