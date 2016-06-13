@@ -110,10 +110,10 @@ header {
     ul {
         padding-left:20px;
         list-style:none;
-    }
 
-    li:before {
-        content: '- ';
+        li:before {
+            content: '- ';
+        }
     }
 }
 
@@ -368,7 +368,7 @@ ul.work-list {
 
 
 .index {
-    text-align: center;   
+    text-align: center;
 }
 
 img.me {
