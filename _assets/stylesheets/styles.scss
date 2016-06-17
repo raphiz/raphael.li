@@ -343,15 +343,15 @@ ul.work-list {
 }
 
 
-.experiments li:before {
+ul.experiments li:before {
     content: '\f0c3';
 }
 
-.contributions li:before {
+ul.contributions li:before {
     content: '\f004';
 }
 
-.projects li:before {
+ul.projects li:before {
     content: '\f02d';
 }
 
