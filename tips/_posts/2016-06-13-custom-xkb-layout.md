@@ -14,10 +14,15 @@ whereas on the (Swiss) German keyboard layout it is located next to enter.
 
 It would be impossible to ever use a Swiss German keyboard again if I would train myself to the US nternational keyboard layout. I therefore had the idea, to tweak the US keyboard like this:
 
+<figure>
+
 {% image resources/custom-xkb-layout/xkb_us_umlauts.svg %}
 
-<small>Modifications in blue - based on ["English: United States keyboard layout
-" via Wikimedia Commons](https://commons.wikimedia.org/wiki/File%3AKB_United_States-NoAltGr.svg)</small>
+<figcaption>
+Modifications in blue - based on <a href="https://commons.wikimedia.org/wiki/File%3AKB_United_States-NoAltGr.svg">"English: United States keyboard layout
+" via Wikimedia Commons</a>
+</figcaption>
+</figure>
 
 OK, let's do this!
 
