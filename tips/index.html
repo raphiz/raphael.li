@@ -3,7 +3,7 @@ layout: default
 title: Tips
 ---
 {% for tag in site.tags %}
-    <h3 class="resource">{{tag[0]}}<h3>
+    <h3 class="resource">{{tag[0]}}</h3>
     <ul>
     {% for entry in site.categories['tips'] %}
         {% if entry.tags contains tag[0] %}
