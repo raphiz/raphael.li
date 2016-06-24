@@ -16,4 +16,4 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 RedirectMatch 301 ^/raphael.li/resources/(.*) /tips/$1
 
 # Redirect 404
-ErrorDocument 404 /404/
+ErrorDocument 404 /raphael.li/404/
