@@ -3,18 +3,20 @@ layout: project
 title: HRS Stundenplanplaner
 type: project
 github: https://github.com/raphiz/stundenplanplaner
-teaser: Optimized timetable planning
+teaser: Optimised timetable planning
 initiation: 2016
 status: maintained
 ---
 
-Every semester, all students of [HSR](https://www.hsr.ch) have to plan their timetable for the next semester. This is usually achieved in spreadsheets or calendars... Obviously, this isn't fun at all. So instead of planning my timetable I spent my time creating a program that does the work for me.
+Every semester, all students of [HSR](https://www.hsr.ch) have to put together their timetable for the next semester. Most students create spreadsheets or use calendar apps. Obviously, this isn't fun at all. So instead of doing this crunching work manually, I spent my time creating a program that does the work for me.
 
-The result consists of a python library to fetch the data from the HSR timetable portal, a calendar export mechanism as well as the planning algorithm itself.
+The result consists of a python library to fetch raw timetable data from the HSR timetable portal, a planning algorithm as well as a calendar export mechanism.
 
-Since the timetable portal is closed source and has no public API, I had to [scrape](https://de.wikipedia.org/wiki/Screen_Scraping) the data.
+Since the HSR timetable portal is closed source and has no public API, I had to [scrape](https://de.wikipedia.org/wiki/Screen_Scraping) the markup code of the website.
 
-I used a constraint solver libraryary for the actual timetable planning. This allowed me to define constraints such as "at least twice a week no lectures in the afternoon" or "no lectures after 4pm". Here is an example output:
+I used a constraint solver algorithm for the actual timetable planning which allowed me to define constraints such as "at least twice a week no lectures in the afternoon" or "no lectures after 4 pm".
+
+Here is an example output:
 
 ```
 [...]
@@ -37,8 +39,8 @@ Time      Mon      Tue       Wed       Thu       Fri       Sat    Sun
 [...]
 ```
 
-Later have I realized, that having access to *all* timetable data can be used for other interesting calculations - for example who of my fellow students visits the same lectures as I do and when do
-we have a common lunch break?
+Later have I realised that having access to *all* timetable data can be used for other interesting calculations - for example, which of my fellow students visit the same lectures as I do or do we have common lunch breaks?
 
-The project is of course open source and can be used by all HSR students. It could be easily
-adapted for students of other universities - the back end part can easily be replaced ([contact  me ](/contact/) if you plan to do this - I can help you with it <i class="fa fa-smile-o" aria-hidden="true"></i>)
+The project is, of course, open source and can be used by all HSR students although I have not advertised. Since it's more an API than a practical tool it's not (yet) accessible to people without programming experience.
+
+The application could be easily adapted for students of other universities - the back end part is isolated and can be replaced ([contact  me ](/contact/) if you plan to do this - I can help you with it <i class="fa fa-smile-o" aria-hidden="true"></i>)
