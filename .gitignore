@@ -1,2 +1,4 @@
 _site
 .asset-cache
+.screenshots
+__pycache__/
