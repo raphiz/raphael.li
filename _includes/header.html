@@ -5,7 +5,9 @@
         <div id="nav" class="menu">
             <a class="close-nav-btn fa fa-times" href="#top"></a>
             <ul>
-                {% for page in site.pages %}
+                {% assign sorted_pages = site.pages | sort:'title' %}
+
+                {% for page in sorted_pages %}
                   {% if page.title %}
                   {% unless page.hidden == true %}
                   <li>
