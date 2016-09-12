@@ -6,7 +6,7 @@ title: Projects
 
 <h2>Projects</h2>
 <ul class="work-list projects">
-{% for project in site.['projects'] reversed %}
+{% for project in site.projects reversed %}
 {% if project.type == "project" %}
 <li class="{{project.status | replace:' ','_'}}">
  <a  href="{{project.url}}">{{project.title}}</a> <span class="initiation">{{project.initiation}}</span>
@@ -17,7 +17,7 @@ title: Projects
 
 <h2>Open Source Contributions</h2>
 <ul class="work-list contributions">
-{% for project in site.['projects'] reversed %}
+{% for project in site.projects reversed %}
 {% if project.type == "contribution" %}
 <li>
 <a href="{{project.url}}">{{project.title}}</a> <span class="initiation">{{project.initiation}}</span>
@@ -28,7 +28,7 @@ title: Projects
 
 <h2>Experiments</h2>
 <ul class="work-list experiments">
-{% for project in site.['projects'] reversed %}
+{% for project in site.projects reversed %}
 {% if project.type == "experiment" %}
 <li>
 <a href="{{project.url}}">{{project.title}}</a> <span class="initiation">{{project.initiation}}</span>
