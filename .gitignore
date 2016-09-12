@@ -1,2 +1,4 @@
 _site
 .asset-cache
+*.pyc
+__pycache__
