@@ -1,0 +1,21 @@
+---
+layout: default
+title: Tips
+---
+
+{% assign tags = '' | split: ',' %}
+{% assign unique_tags = '' | split: ',' %}
+
+<!-- Map and flatten -->
+{% assign tags =  site.tips | map: 'tags' | join: ',' | join: ',' | split: ',' | sort | uniq %}
+
+{% for tag in tags %}
+    <h3 class="resource">{{tag}}</h3>
+    <ul>
+    {% for entry in site.tips reversed %}
+        {% if entry.tags contains tag %}
+            <li><a href="{{entry.url}}">{{entry.title}}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endfor %}

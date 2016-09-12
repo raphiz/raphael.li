@@ -1,6 +1,6 @@
 ---
 layout: project
-title: HRS Stundenplanplaner
+title: HSR Stundenplanplaner
 type: project
 github: https://github.com/raphiz/stundenplanplaner
 teaser: Optimised timetable planning

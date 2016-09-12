@@ -17,6 +17,21 @@ exclude:
 
 host: 0.0.0.0
 
+collections:
+    projects:
+        output: true
+        permalink: /projects/:title/
+    tips:
+        output: true
+        permalink: /tips/:title/
+# Set default layout for all projects/experiments
+defaults:
+  -
+    scope:
+      path: "_projects"
+    values:
+      layout: "project"
+
 gems:
     - therubyracer
     - jekyll-assets
