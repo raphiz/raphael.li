@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Put you OS into a Virtual Box
+title: Put your OS into a Virtual Box
 tags: linux
 ---
 
@@ -71,4 +71,4 @@ mhwd -a pci free 0300
 ```bash
 pacman -Ss virtualbox-guest-utils virtualbox-guest-dkms
 ```
-After that - thaddaa! 
+After that - thaddaa!
