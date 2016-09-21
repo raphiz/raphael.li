@@ -57,3 +57,12 @@ After I logged out and in again, everything worked as expected - at least since 
 Before using Xfce  I used Gnome 3 - and Gnome does it's own magic with keyboard layouts.
 I could not yet figure out a permanent solution for Gnome - but if you
 do, [let me know](/contact/)!
+
+##A Note on Windows:
+It is possible to create custom keyboard layouts on Windows as well (this is especially useful if you are in the habit of using a customised layout).
+
+Download the free tool from Microsoft called [Keyboard Layout Creator 1.4](https://www.microsoft.com/en-us/download/details.aspx?id=22339). 
+I find the software not intuitive at all - but you can test and see the result immediately. When you're done, build a setup package and install it. This solution is quite nice since it allows you to backup and reuse the setup package on any other Windows PC.
+
+You can also download [my configuration](/assets/downloads/en_rz.klc) or [the installer](/assets/downloads/en_rz.zip) for my customised layout (both without warranty!).
+

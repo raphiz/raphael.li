@@ -10,8 +10,8 @@ Soon, I'll get a new notebook - an ideal opportunity to set up a new and clean s
 
 Some would argue - well then just back it all up! Yes - that's what I'm going to do - but even better! I'll convert the barebone installation into a Virtual Machine; so I can boot my good old system whenever I want to check these neat tweaks from past days.
 
-## Requiremets
-
+## Requirements
+i
 To get this going, I needed ...
 
 * ... a lot of time  - most of it for copying
@@ -72,3 +72,14 @@ mhwd -a pci free 0300
 pacman -Ss virtualbox-guest-utils virtualbox-guest-dkms
 ```
 After that - thaddaa!
+
+
+## Using KVM
+You can save a lot of time by using KVM with virt-manager instead of VirtualBox.
+KVM can read raw images directly - which saves you the painful conversion time.
+
+However, You have to consider the following aspects:
+* Change the Disk Bus (??) from VirtIO to Sata
+* Eventually Set a specific UUIDi
+* Setup a shared folder to transfer data between the guest and the host
+* [Resize the Partition](https://help.ubuntu.com/community/ResizeEncryptedPartitions)
