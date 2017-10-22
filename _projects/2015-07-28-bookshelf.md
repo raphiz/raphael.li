@@ -5,9 +5,8 @@ type: project
 github: https://github.com/raphiz/bookshelf
 teaser: A virtual bookshelf for browsing in old books in museums and archives
 initiation: 2015
-status: active
+status: inactive
 ---
-
 
 It can be very fascinating, to browse in old books. However, these old books are often not accessible to everyone - which makes sense, since we won't damage them too much.
 

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Protofast
-type: project
+type: experiment
 github: https://github.com/raphiz/protofast
 teaser: Quickly create HTML mock-ups without duplicating code
 initiation: 2014

@@ -5,7 +5,7 @@ type: project
 github: https://github.com/raphiz/stundenplanplaner
 teaser: Optimised timetable planning
 initiation: 2016
-status: maintained
+status: inactive
 ---
 
 Every semester, all students of [HSR](https://www.hsr.ch) have to put together their timetable for the next semester. Most students create spreadsheets or use calendar apps. Obviously, this isn't fun at all. So instead of doing this crunching work manually, I spent my time creating a program that does the work for me.
