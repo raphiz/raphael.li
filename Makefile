@@ -6,7 +6,7 @@ buildimage:
 	docker build -t raphiz/raphael.li docker/
 
 build:
-	docker run --rm --name raphael.li -u jekyll -v $(shell pwd):/src/:z -e "JEKYLL_ENV=production" raphiz/raphael.li jekyll build
+	docker run --rm --name raphael.li -u jekyll -v $(shell pwd):/src/:z raphiz/raphael.li jekyll build
 
 serve:
 	docker run --rm --name raphael.li -u jekyll -v $(shell pwd):/src/:z -p 4000:4000 raphiz/raphael.li jekyll server
