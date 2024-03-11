@@ -1,3 +1,6 @@
 _site/
 node_modules/
 .cache
+
+result
+.pre-commit-config.yaml
