@@ -1,0 +1,17 @@
+# robotstxt.org/
+Sitemap: https://raphael.li/sitemap.xml
+
+User-agent: *
+Disallow:
+Allow: /
+
+User-agent: FaceBook
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+
+User-agent: Google-Extended
+Disallow: /
+
