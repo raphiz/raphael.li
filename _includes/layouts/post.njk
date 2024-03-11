@@ -14,6 +14,16 @@ layout: layouts/base.njk
 	{%- endfor %}
 </ul>
 
+{% set table_of_content = content | toc %}
+{% set toc_size = table_of_content | length %}
+{% if toc_size > 0 %}
+<details open>
+  <summary style="cursor: pointer;">Table of contents</summary>
+  {{ table_of_content | safe }}
+</details>	  
+{% endif %}
+
+
 {{ content | safe }}
 
 {%- if collections.posts %}

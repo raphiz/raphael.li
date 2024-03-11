@@ -7,6 +7,8 @@ const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
+const pluginTOC = require("eleventy-plugin-nesting-toc");
+
 const pluginImages = require("./eleventy.config.images.js");
 
 module.exports = function (eleventyConfig) {
@@ -25,6 +27,7 @@ module.exports = function (eleventyConfig) {
 
   // App plugins
   eleventyConfig.addPlugin(pluginImages);
+  eleventyConfig.addPlugin(pluginTOC, { tags: ["h1", "h2", "h3"] });
 
   // Official plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -83,13 +86,11 @@ module.exports = function (eleventyConfig) {
   // Customize Markdown library settings:
   eleventyConfig.amendLibrary("md", (mdLib) => {
     mdLib.use(markdownItAnchor, {
-      permalink: markdownItAnchor.permalink.ariaHidden({
-        placement: "after",
+      level: [1, 2, 3],
+      permalink: markdownItAnchor.permalink.headerLink({
+        safariReaderFix: true,
         class: "header-anchor",
-        symbol: "#",
-        ariaHidden: false,
       }),
-      level: [1, 2, 3, 4],
       slugify: eleventyConfig.getFilter("slugify"),
     });
   });
