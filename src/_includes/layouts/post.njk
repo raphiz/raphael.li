@@ -22,8 +22,9 @@ layout: layouts/base.njk
 </details>	  
 {% endif %}
 
-
+<article>
 {{ content | safe }}
+</article>
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
