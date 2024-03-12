@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Raphael.li",
+  title: "raphael.li",
   url: "https://www.raphael.li/",
   language: "en",
   description: "Raphael Zimmermanns Website",
