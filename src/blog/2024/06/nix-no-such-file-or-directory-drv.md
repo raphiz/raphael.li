@@ -1,8 +1,9 @@
 ---
 title: "Fixing: `Error opening file '/nix/store/....drv'`"
 tags:
-  - java
-  - JVM
+  - linux
+  - NixOS
+  - Nix
 date: 2024-06-05
 ---
 
