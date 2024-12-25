@@ -1,5 +1,5 @@
 ---
-title: Remeber position in VLC
+title: Remember position in VLC
 tags: linux
 date: 2015-06-29
 ---

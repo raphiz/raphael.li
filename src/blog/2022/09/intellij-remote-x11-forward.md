@@ -41,4 +41,4 @@ So far It seems much better than the built-in solution from IntelliJ - but letâ€
 
 ## Alternativen
 
-This obvisously only works for the (deprecated) X11 Window Server - For Wayland, [Waypipe](https://gitlab.freedesktop.org/mstoeckl/waypipe/) seems like a good option (haven't tried it out yet).
+This obviously only works for the (deprecated) X11 Window Server - For Wayland, [Waypipe](https://gitlab.freedesktop.org/mstoeckl/waypipe/) seems like a good option (haven't tried it out yet).

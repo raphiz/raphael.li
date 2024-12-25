@@ -39,6 +39,7 @@
           hooks = {
             alejandra.enable = true;
             prettier.enable = true;
+            typos.enable = true;
           };
         };
       };

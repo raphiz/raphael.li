@@ -23,7 +23,7 @@ Next, download the following script and modify the two variables on top. `DOMAIN
 DOMAIN="domain.nsupdate.info"
 TOKEN="MYTOKEN"
 
-# Evaluate the current remote IP and the one that is currently registerd
+# Evaluate the current remote IP and the one that is currently registered
 CURRENT=$(curl -s https://ipv4.nsupdate.info/myip)
 SAVED=$(python2 -c "import socket; print socket.gethostbyname('$DOMAIN')")
 LOGFILE=$( cd "$( dirname "${0}" )" && pwd )/log.txt
@@ -37,7 +37,7 @@ fi
     echo '----------------------------'
     date
     echo "The current external IP is: $CURRENT"
-    echo "The following IP is regitered: $SAVED"
+    echo "The following IP is registered: $SAVED"
 } >> "$LOGFILE"
 
 # Check if an update is required - if so, update and verify the response
@@ -47,7 +47,7 @@ if [ "$CURRENT" != "$SAVED" ] || [ "$(date +%d)" -eq "01" ]; then
     RESPONSE=$(curl --user "$DOMAIN":"$TOKEN" https://ipv4.nsupdate.info/nic/update)
     START=$(python2 -c "print '$RESPONSE'[:5]")
     if [ "$START" = " good" ]; then
-        echo "Update succesful!" >> "$LOGFILE"
+        echo "Update successful!" >> "$LOGFILE"
     elif [ "$START" = "nochg" ]; then
         echo "WARNING: ip has not changed - cache" >> "$LOGFILE"
     fi
@@ -75,7 +75,7 @@ It's time to test. Select the newly created task in the list and click on `run`.
 ----------------------------
 Mon Jun  1 12:01:30 CEST 2015
 The current external IP is: X.X.X.X
-The following IP is regitered: X.X.X.X
+The following IP is registered: X.X.X.X
 no update required
 ```
 

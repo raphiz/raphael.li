@@ -88,7 +88,7 @@ This approach not only eliminates the need to escape single quotes, it also uses
 
 [icu4j](https://unicode-org.github.io/icu-docs/) looks very promising, but unfortunately I do not have any experience with it (yet).
 
-icu4j not only seem to address the Single Quotes pitfalls but has also support for propper pluralization etc.
+icu4j not only seem to address the Single Quotes pitfalls but has also support for proper pluralization etc.
 
 ## Conclusion
 
