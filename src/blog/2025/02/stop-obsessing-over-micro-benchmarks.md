@@ -5,12 +5,12 @@ tags:
   - Kotlin
   - Postgres
   - JVM
-date: 2024-09-22
+date: 2025-02-24
 ---
 
 Recently, I saw a blog post, claiming that [Lists are faster than Sequences](https://chrisbanes.me/posts/use-sequence/). Soon after, the obligatory [contradiction](https://erikvv.github.io/sequence-revenge/) appeared.
 
-Performance discussions like this often miss the point. Instead of focusing on micro-optimizations, developers should prioritize **maintainability and profiling**.
+Performance discussions like this often miss the point. Instead of focusing on micro-optimizations, we should prioritize **maintainability and readability** and invest in **mastering profiler tools and techniques**.
 
 ## Performance in the Real World
 
