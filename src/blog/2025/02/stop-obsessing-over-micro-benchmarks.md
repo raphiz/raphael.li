@@ -10,7 +10,7 @@ date: 2025-02-24
 
 Recently, I saw a blog post, claiming that [Lists are faster than Sequences](https://chrisbanes.me/posts/use-sequence/). Soon after, the obligatory [contradiction](https://erikvv.github.io/sequence-revenge/) appeared.
 
-Performance discussions like this often miss the point. Instead of focusing on micro-optimizations, we should prioritize **maintainability and readability** and invest in **mastering profiler tools and techniques**.
+When discussing performance, it's helpful to look beyond micro-benchmarks and focus on maintainability, readability, and effective profiling techniques.
 
 ## Performance in the Real World
 
@@ -26,7 +26,7 @@ So instead of debating micro-benchmarks, here's what actually makes a difference
 
 ## Practical Guidelines for Performance Optimization
 
-I thought this was common knowledge, but apparently, it needs repeating.
+Not everyone may be aware of this, so I'd like to share it again.
 
 ### 1. Optimize for Maintainability and Readability - Not for Performance
 
