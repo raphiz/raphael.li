@@ -39,23 +39,23 @@ To update the `jvmToolchain` here, we can use a `customManager` from renovate as
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
 
+  "ignorePresets": [
+    // The `config:recommended` preset includes the `workarounds:javaLTSVersions` preset which limits Renovate to upgrade to LTS versions only.
+    // If you want Renovate to offer all major Java updates then ignore this preset as follows:
+    "workarounds:javaLTSVersions"
+  ],
   "customManagers": [
     {
       "customType": "regex",
       "description": "Update Java Version",
-
       // match all files called `build.gradle.kts`.
       "fileMatch": ["(^|.*/)build.gradle.kts$"],
-
       // Find the relevant location in the file: jvmToolchain(...)
       "matchStrings": ["jvmToolchain\\((?<currentValue>.*)\\)"],
-
       // Figure out the "latest GA version" from the openjdk/jdk repo tags
-      "datasourceTemplate": "github-tags",
-      "depNameTemplate": "openjdk/jdk",
-      "extractVersionTemplate": "^jdk-(?<version>.+?)-ga$",
-
-      "versioningTemplate": "loose"
+      "datasourceTemplate": "java-version",
+      "depNameTemplate": "java",
+      "extractVersionTemplate": "^(?<version>[^.]+?).*$"
     }
   ]
 }
