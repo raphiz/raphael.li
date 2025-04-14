@@ -1,6 +1,7 @@
 ---
 title: Handling Vulnerable Transitive Dependencies in Gradle
 tags:
+  - Gradle
   - java
   - Kotlin
   - JVM
